@@ -1,0 +1,147 @@
+# ==============================================================================
+# .gitignore cho Đề tài: Phân loại malware PE từ EMBER và kiểm tra drift theo thời gian
+# Thư mục: midterm exam
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. DỮ LIỆU NẶNG VÀ TẬP TIN NÉN DUNG LƯỢNG LỚN (RAW DATASETS)
+# ------------------------------------------------------------------------------
+# Bỏ qua tệp nén gốc ~1.7 GB tải từ Kaggle (GitHub chặn các file > 100 MB)
+input/data/raw/*
+!input/data/raw/.gitkeep
+!input/data/raw/README.md
+
+# Các định dạng tệp nén lưu trữ lớn
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+*.rar
+*.gz
+*.bz2
+
+# Các định dạng dữ liệu raw stream lớn
+*.jsonl
+*.parquet
+*.feather
+*.h5
+*.hdf5
+
+# Dữ liệu mẫu đã xử lý:
+# Mặc định file ember_sampled.csv (~17 MB) cho phép push để người chấm/chạy lại
+# có thể thực thi ngay mà không cần tải lại 1.7 GB từ Kaggle.
+# Nếu bạn KHÔNG muốn push cả dữ liệu 17 MB này, hãy bỏ dấu # ở dòng dưới:
+# output/data/processed/*.csv
+
+# ------------------------------------------------------------------------------
+# 2. CÁC MÔ HÌNH MACHINE LEARNING ĐÃ HUẤN LUYỆN (MODEL CHECKPOINTS)
+# ------------------------------------------------------------------------------
+# Các mô hình nhị phân huấn luyện có dung lượng lớn (ExtraTrees ~104 MB, RandomForest ~41 MB)
+output/models/*
+!output/models/.gitkeep
+
+# Định dạng tệp lưu trữ mô hình học máy
+*.joblib
+*.pkl
+*.pickle
+*.bin
+*.model
+*.onnx
+*.pt
+*.pth
+
+# ------------------------------------------------------------------------------
+# 3. PYTHON COMPILED & CACHE
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Coverage cache
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# 4. MÔI TRƯỜNG ẢO (VIRTUAL ENVIRONMENTS)
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 5. THÔNG TIN XÁC THỰC VÀ BẢO MẬT (SECRETS / API CREDENTIALS)
+# ------------------------------------------------------------------------------
+# Tuyệt đối không commit API token Kaggle và biến môi trường
+kaggle.json
+.kaggle/
+*.env
+.env.*
+*.pem
+*.key
+*.cert
+*.crt
+
+# ------------------------------------------------------------------------------
+# 6. TỆP TỰ ĐỘNG CỦA HỆ ĐIỀU HÀNH & TRÌNH SOẠN THẢO (OS & IDE)
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Trình soạn thảo (VS Code, JetBrains, Sublime)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 7. TỆP TẠM VÀ SCRATCH LOGS
+# ------------------------------------------------------------------------------
+.build_ember_pptx/
+scratch/
+scratch_*.py
+test_*.pptx
+*.tmp
+*.temp
+*.log
+.codex-finalizer/
+.deps/

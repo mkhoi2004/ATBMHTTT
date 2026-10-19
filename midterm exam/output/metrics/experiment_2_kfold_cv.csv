@@ -1,0 +1,6 @@
+,mean_accuracy,min_accuracy,max_accuracy,mean_training_time
+AdaBoost,0.804,0.787,0.8154,3.931
+GradientBoosting,0.8676,0.8604,0.8807,19.608
+DecisionTree,0.8975,0.8872,0.9167,0.655
+ExtraTrees,0.9414,0.9359,0.9477,0.644
+RandomForest,0.9438,0.9375,0.9479,1.061

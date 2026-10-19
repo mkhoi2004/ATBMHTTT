@@ -1,0 +1,27 @@
+{
+    "full_features_count": 49,
+    "full_accuracy": 0.9466,
+    "full_training_time": 1.087,
+    "reduced_features_count": 15,
+    "reduced_accuracy": 0.9352,
+    "reduced_training_time": 0.988,
+    "accuracy_drop": 0.0114,
+    "time_saved_percent": 9.09,
+    "top_features_list": [
+        "certificate_table_size",
+        "sections_max_entropy",
+        "has_dll_flag",
+        "sections_mean_entropy",
+        "resource_table_size",
+        "imports_nb",
+        "size",
+        "timestamp",
+        "subsystem",
+        "sizeof_code",
+        "iat_size",
+        "import_table_size",
+        "sections_mean_size",
+        "sections_max_vsize",
+        "sections_mean_vsize"
+    ]
+}

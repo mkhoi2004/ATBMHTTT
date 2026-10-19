@@ -1,0 +1,63 @@
+# ==============================================================================
+# Global .gitignore cho Repository ATBMHTTT
+# ==============================================================================
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Testing & Linting
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Credentials & Secrets
+kaggle.json
+.kaggle/
+*.env
+.env.*
+*.pem
+*.key
+
+# Large Datasets & Archives
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+*.rar
+*.gz
+*.bz2
+*.jsonl
+*.parquet
+
+# ML Model Checkpoints (> 10MB)
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.bin
+
+# OS & IDE
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
